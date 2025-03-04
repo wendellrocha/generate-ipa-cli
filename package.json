@@ -1,0 +1,31 @@
+{
+  "name": "generate-ipa",
+  "version": "1.0.2",
+  "description": "",
+  "main": "bin/index.js",
+  "bin": {
+    "generate-ipa": "bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.5.2",
+  "volta": {
+    "node": "22.14.0"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.3.2",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "figlet": "^1.8.0",
+    "inquirer": "^12.4.2",
+    "ora": "^8.2.0",
+    "shelljs": "^0.8.5"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}
