@@ -4,7 +4,15 @@ This project provides a command-line interface (CLI) tool for generating iOS app
 
 ## Installation
 
-_soon_
+
+```
+npm install -g generate-ipa
+```
+Or
+
+```
+npm install -D generate-ipa
+```
 
 ## Usage
 
