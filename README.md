@@ -15,7 +15,7 @@ generate-ipa --help
 ### Commands
 
 ```bash
-  generate-ipa --settings ./settings.json
+generate-ipa --settings ./settings.json
 ```
 
 - `--settings`: path to settings.json file.
