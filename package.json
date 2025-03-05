@@ -1,7 +1,7 @@
 {
   "name": "generate-ipa",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "This project provides a command-line interface (CLI) tool for generating iOS application packages (.ipa files).",
   "main": "bin/index.js",
   "bin": {
     "generate-ipa": "bin/index.js"
@@ -9,9 +9,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "generate",
+    "ipa",
+    "ios",
+    "build"
+  ],
+  "author": "Wendell Rocha",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wendellrocha/generate-ipa.git"
+  },
+  "license": "MIT",
   "packageManager": "pnpm@10.5.2",
   "volta": {
     "node": "22.14.0"
