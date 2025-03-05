@@ -1,46 +1,41 @@
-import fs from 'fs';
-
-export function getConfiguration(settingsPath, flavor, target) {
-  const settings = fs.readFileSync(settingsPath, 'utf8');
-  const settingsJson = JSON.parse(settings);
-
+export function getConfiguration(settings, flavor, target) {
   if (target === 'store' && flavor === 'prod') {
     return {
-      configuration: settingsJson.prodConfiguration,
-      exportOptions: settingsJson.storeExportOptions,
-      archiveLocation: settingsJson.archiveLocation,
-      projectFilePath: settingsJson.projectFilePath,
-      workspaceFilePath: settingsJson.workspaceFilePath,
+      configuration: settings.prodConfiguration,
+      exportOptions: settings.storeExportOptions,
+      archiveLocation: settings.archiveLocation,
+      projectFilePath: settings.projectFilePath,
+      workspaceFilePath: settings.workspaceFilePath,
     };
   }
 
   if (target === 'store' && flavor === 'dev') {
     return {
-      configuration: settingsJson.devConfiguration,
-      exportOptions: settingsJson.storeExportOptions,
-      archiveLocation: settingsJson.archiveLocation,
-      projectFilePath: settingsJson.projectFilePath,
-      workspaceFilePath: settingsJson.workspaceFilePath,
+      configuration: settings.devConfiguration,
+      exportOptions: settings.storeExportOptions,
+      archiveLocation: settings.archiveLocation,
+      projectFilePath: settings.projectFilePath,
+      workspaceFilePath: settings.workspaceFilePath,
     };
   }
 
   if (target === 'adhoc' && flavor === 'prod') {
     return {
-      configuration: settingsJson.prodConfiguration,
-      exportOptions: settingsJson.adhocExportOptions,
-      archiveLocation: settingsJson.archiveLocation,
-      projectFilePath: settingsJson.projectFilePath,
-      workspaceFilePath: settingsJson.workspaceFilePath,
+      configuration: settings.prodConfiguration,
+      exportOptions: settings.adhocExportOptions,
+      archiveLocation: settings.archiveLocation,
+      projectFilePath: settings.projectFilePath,
+      workspaceFilePath: settings.workspaceFilePath,
     };
   }
 
   if (target === 'adhoc' && flavor === 'dev') {
     return {
-      configuration: settingsJson.devConfiguration,
-      exportOptions: settingsJson.adhocExportOptions,
-      archiveLocation: settingsJson.archiveLocation,
-      projectFilePath: settingsJson.projectFilePath,
-      workspaceFilePath: settingsJson.workspaceFilePath,
+      configuration: settings.devConfiguration,
+      exportOptions: settings.adhocExportOptions,
+      archiveLocation: settings.archiveLocation,
+      projectFilePath: settings.projectFilePath,
+      workspaceFilePath: settings.workspaceFilePath,
     };
   }
 }

@@ -1,8 +1,14 @@
 import { input, select } from '@inquirer/prompts';
 import chalk from 'chalk';
 
-export async function getAnswers() {
+export async function getAnswers(settings) {
   try {
+    let flavors = ['dev', 'prod'];
+
+    if (settings.flavors?.length > 0) {
+      flavors = settings.flavors;
+    }
+
     const answers = {
       target: await select({
         message: "What's the target?",
@@ -10,7 +16,7 @@ export async function getAnswers() {
       }),
       flavor: await select({
         message: "What's the flavor?",
-        choices: ['dev', 'prod'],
+        choices: flavors,
       }),
       versionNumber: await input({
         message: "What's the version number?",

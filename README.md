@@ -14,15 +14,14 @@ generate-ipa --help
 
 ### Commands
 
-*   **generate**: Generates an .ipa file.
+```bash
+  generate-ipa --settings ./settings.json
+```
 
-    ```bash
-    generate-ipa --settings ./settings.json
-    ```
-
-    *   `--settings`: path to settings.json file.
+- `--settings`: path to settings.json file.
 
 ### Example settings file
+
 ```json
 {
   "archiveLocation": "YourProject.xcarchive",
@@ -31,9 +30,25 @@ generate-ipa --help
   "projectFilePath": "ios/YourProject.xcodeproj/project.pbxproj",
   "devConfiguration": "Development.Release",
   "prodConfiguration": "Production.Release",
-  "workspaceFilePath": "ios/YourProject.xcworkspace"
+  "workspaceFilePath": "ios/YourProject.xcworkspace",
+  "outputDirectory": "",
+  "flavors": []
 }
 ```
+
+- `archiveLocation`: path to the .xcarchive file.
+- `adhocExportOptions`: path to the AdHocExportOptions.plist file.
+- `storeExportOptions`: path to the StoreExportOptions.plist file.
+- `projectFilePath`: path to the project file.
+- `devConfiguration`: name of the development configuration.
+- `prodConfiguration`: name of the production configuration.
+- `workspaceFilePath`: path to the workspace file.
+- `outputDirectory`: path to the output directory for the .ipa file.
+- `flavors`: array of flavors.
+
+### Flavors
+
+The flavors are used to specify the configurations for different environments. For example, you might have a development environment and a production environment. Each environment has its own configuration, and you can specify which configuration to use for each environment
 
 ## Contributing
 

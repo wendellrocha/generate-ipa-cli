@@ -1,9 +1,11 @@
 {
-    "archiveLocation": "",
-    "adhocExportOptions": "",
-    "storeExportOptions": "",
-    "projectFilePath": "",
-    "devConfiguration": "",
-    "prodConfiguration": "",
-    "workspaceFilePath": ""
-  }
+  "archiveLocation": "",
+  "adhocExportOptions": "",
+  "storeExportOptions": "",
+  "projectFilePath": "",
+  "devConfiguration": "",
+  "prodConfiguration": "",
+  "workspaceFilePath": "",
+  "outputDirectory": "",
+  "flavors": ["dev", "stg", "prod"]
+}

@@ -3,6 +3,7 @@
 import chalk from 'chalk';
 import { program } from 'commander';
 import figlet from 'figlet';
+import fs from 'fs';
 import pkg from '../package.json' with { type: 'json' };
 import { getAnswers } from '../src/answers/answers.js';
 import { exportIpa } from '../src/commands/export-ipa.js';
@@ -26,13 +27,17 @@ program
 
 program.parse(process.argv);
 
+const settingsFile = fs.readFileSync(settings, 'utf8');
+const settingsJson = JSON.parse(settingsFile);
+
 console.log(
   chalk.yellow(
     figlet.textSync('Generate IPA CLI', { horizontalLayout: 'full' }),
   ),
 );
 
-const { flavor, target, versionNumber, buildNumber } = await getAnswers();
+const { flavor, target, versionNumber, buildNumber } =
+  await getAnswers(settingsJson);
 
 const {
   configuration,
@@ -40,8 +45,8 @@ const {
   archiveLocation,
   projectFilePath,
   workspaceFilePath,
-} = getConfiguration(settings, flavor, target);
+} = getConfiguration(settingsJson, flavor, target);
 
 setBuildAndVersion(versionNumber, buildNumber, projectFilePath);
 generateArchive(workspaceFilePath, configuration, archiveLocation);
-exportIpa(archiveLocation, exportOptions);
+exportIpa(archiveLocation, settingsJson.outputDirectory, exportOptions);
