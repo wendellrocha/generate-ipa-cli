@@ -31,8 +31,8 @@ generate-ipa --help
   "devConfiguration": "Development.Release",
   "prodConfiguration": "Production.Release",
   "workspaceFilePath": "ios/YourProject.xcworkspace",
-  "outputDirectory": "",
-  "flavors": []
+  "outputDirectory": "scripts/output",
+  "flavors": ["dev", "stg", "prod"]
 }
 ```
 
@@ -44,7 +44,7 @@ generate-ipa --help
 - `prodConfiguration`: name of the production configuration.
 - `workspaceFilePath`: path to the workspace file.
 - `outputDirectory`: path to the output directory for the .ipa file.
-- `flavors`: array of flavors.
+- `flavors`: array of flavors. Defaults to `["dev","prod"]`.
 
 ### Flavors
 
