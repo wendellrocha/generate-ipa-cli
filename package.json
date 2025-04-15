@@ -18,7 +18,7 @@
   "author": "Wendell Rocha",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wendellrocha/generate-ipa.git"
+    "url": "git+https://github.com/wendellrocha/generate-ipa-cli.git"
   },
   "license": "MIT",
   "packageManager": "pnpm@10.5.2",
