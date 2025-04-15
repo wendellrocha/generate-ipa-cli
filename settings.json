@@ -5,6 +5,7 @@
   "projectFilePath": "",
   "devConfiguration": "",
   "prodConfiguration": "",
+  "stagingConfiguration": "",
   "workspaceFilePath": "",
   "outputDirectory": "",
   "flavors": ["dev", "stg", "prod"]
