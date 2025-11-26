@@ -4,7 +4,7 @@ import shell from 'shelljs';
 export function generateArchive(workspace, configuration, archiveLocation) {
   console.log(
     chalk.green(
-      `Generating archive with configuration ${chalk.yellow(configuration)} and scheme ${chalk.yellow(scheme)}`,
+      `Generating archive with configuration ${chalk.yellow(configuration)} and scheme ${chalk.yellow(configuration)}`,
     ),
   );
   shell.exec(

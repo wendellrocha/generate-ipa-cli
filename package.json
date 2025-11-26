@@ -1,6 +1,6 @@
 {
   "name": "generate-ipa",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This project provides a command-line interface (CLI) tool for generating iOS application packages (.ipa files).",
   "main": "bin/index.js",
   "bin": {
