@@ -9,7 +9,7 @@ export function exportIpa(archiveLocation, outputDirectory, exportOptions) {
     ? `${outputDirectory}/${date}`
     : `./ipa/${date}`;
 
-  console.log(chalk.green(`Output directtory: ${outputPath}`));
+  console.log(chalk.green(`Output directory: ${chalk.yellow(outputPath)}`));
 
   shell.exec('mkdir -p {outputPath}'.replaceAll('{outputPath}', outputPath));
   shell.exec(
